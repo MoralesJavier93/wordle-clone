@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 854987835519335245}
   - component: {fileID: 5598628557223012188}
   - component: {fileID: 7579446738358216285}
+  - component: {fileID: -1161299415306635643}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +121,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5598628557223012188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-1161299415306635643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8481022843220215171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f78191c6f6bceb4db1a2a098b312850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterText: {fileID: 7765300899758859405}
 --- !u!1 &9088505008133180409
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +159,7 @@ GameObject:
   - component: {fileID: 299204683206443692}
   - component: {fileID: 7765300899758859405}
   m_Layer: 5
-  m_Name: text
+  m_Name: Letter text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
