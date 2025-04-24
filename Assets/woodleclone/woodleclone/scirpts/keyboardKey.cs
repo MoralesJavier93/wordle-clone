@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class KeyboardKey : MonoBehaviour
 {
     [Header("Elements")]
     [SerializeField] private TextMeshProUGUI letterText;
 
+    [Header("Events")]
+    public static Action<char> onKeyPressed;
+
     void Start()
     {
-        GetComponent<Button>().onClick.AddListener(Test);
+        GetComponent<Button>().onClick.AddListener(SendKeyPressEvent);
     }
 
     // Update is called once per frame
@@ -20,8 +24,8 @@ public class KeyboardKey : MonoBehaviour
         
     }
 
-    private void Test() 
+    private void SendKeyPressEvent() 
     {
-        Debug.Log(letterText.text);
+        onKeyPressed?.Invoke(letterText.text[0]);
     }
 }
