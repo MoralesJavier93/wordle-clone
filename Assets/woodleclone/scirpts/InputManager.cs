@@ -33,15 +33,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void KeyPressedCallback(char letter) 
     {
-        if (wordContainers[currentWordContainerIndex].IsComplete()) 
-        {
-            currentWordContainerIndex++;
-        }
-
         wordContainers[currentWordContainerIndex].Add(letter);
+
+        if (wordContainers[currentWordContainerIndex].IsComplete())
+        {
+            //CheckWord();
+            //currentWordContainerIndex++;
+        }
     }
 
-    private void CheckWord() 
+    public void CheckWord() 
     {
         string wordToCheck = wordContainers[currentWordContainerIndex].GetWord();
         string secretWord = WordManager.instance.GetSecretWord();
