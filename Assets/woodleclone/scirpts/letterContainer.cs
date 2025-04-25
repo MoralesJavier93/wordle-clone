@@ -5,6 +5,7 @@ public class letterContainer : MonoBehaviour
 {
     [Header("Elements")]
     [SerializeField] private TextMeshPro letter;
+    [SerializeField] private SpriteRenderer backgroundRenderer;
 
     void Start()
     {
@@ -30,5 +31,9 @@ public class letterContainer : MonoBehaviour
     public char GetLetter() 
     {
         return letter.text[0];
+    }
+    public void SetColor(Color color)
+    {
+        backgroundRenderer.color = color;
     }
 }

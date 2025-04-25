@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: {fileID: 9220240797523668339}
+  backgroundRenderer: {fileID: 380363804570213226}
 --- !u!1 &5361026417980066278
 GameObject:
   m_ObjectHideFlags: 0

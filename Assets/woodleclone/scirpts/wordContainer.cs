@@ -39,6 +39,23 @@ public class wordContainer : MonoBehaviour
         currentLetterIndex++;
     }
 
+    public bool RemoveLetter() 
+    {
+        if (currentLetterIndex <= 0) 
+        {
+            return false;
+        }
+        currentLetterIndex--;
+        letterContainers[currentLetterIndex].Initialize();
+
+        return true;
+    }
+
+    public letterContainer[] GetLetterContainers() 
+    {
+        return letterContainers;
+    }
+
     public string GetWord() 
     {
         string word = "";
@@ -48,8 +65,6 @@ public class wordContainer : MonoBehaviour
 
         return word;
     }
-
-
     public bool IsComplete() 
     {
         return currentLetterIndex >= 5;
